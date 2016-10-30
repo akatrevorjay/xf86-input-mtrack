@@ -1,3 +1,40 @@
+xserver-xorg-input-mtrack (0.4.0ubuntu1ppa1) yakkety; urgency=medium
+
+  [ p2rkw ]
+  * Add myself to license section.
+  * Smooth scroll: detect and handle flipped up&down, left&right buttons
+  * Removed incorrect format flags.
+  * Introduce completly new timers system.
+  * Add separate logging macros(driver, gestures. Never post buttons 3-7 in smooth scroll mode.
+  * Add examples with my current configuration as first example.
+  * Add "Bug reporting" section to readme.md.
+  * Proper initialization and setup of scroll axes(2 and 3).
+  * Setup scroll valuators also during device initialization.
+  * Cosmetic changes: changed function names to follow convention.
+
+  [ EiNSTeiN_ ]
+  * Do not consider edge clicks when calculating emulated buttons
+
+  [ p2rkw ]
+  * github-#23 - change type of variables holding movement delta to double for better precision.
+  * Null check for device ptr == 0. Postpone scroll valuators initialization.
+  * Rewrite tapping_update from scratch. Remove 'status' field from Touch, move it into 'flags'.
+  * Remove old tap implementation.
+
+  [ Paul Thomson ]
+  * Clear the MT_BUTTON bit of touches when an integrated button is released.
+
+  [ p2rkw ]
+  * Cosmetic chages after merge.
+  * Disable log messages while tapping.
+  * Scale gesture reimplementation.
+  * Remove old scale implementation. Disable loging in triger_scale.
+
+  [ Trevor Joynson (trevorj) ]
+  * Simplify
+
+ -- Trevor Joynson (Debian) <debian@trevor.joynson.io>  Sat, 29 Oct 2016 17:46:16 -0700
+
 xserver-xorg-input-mtrack (0.4.0) unstable; urgency=low
 
   * Add smooth scroll
